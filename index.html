@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="An online scene representation method tackling issues in applying implicit representation method to VSLAM-like tasks.">
+  <meta name="keywords" content="Online Scene Representation, View Synthesis, Neural Radiance Field, Camera Motion Deblurring">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Representing Boundary-ambiguous Scene Online with Scale-encoded Cascaded Grids and Radiance Field Deblurring</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Representing Boundary-ambiguous Scene Online with Scale-encoded Cascaded Grids and Radiance Field Deblurring</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://merical.github.io/">Shenghao Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://people.ucas.edu.cn/~zeyxia">Zeyang Xia</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a>Qunfei Zhao</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Automation, Shanghai Jiao Tong University,</span>
+            <span class="author-block"><sup>2</sup>Shenzhen Institute of Advanced Technology，Chinese Academy of Sciences,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Merical/OnlineNeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Comming Soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Merical/OnlineNeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Comming Soone)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="tum" autoplay muted loop playsinline height="25%">
+        <source src="./static/videos/nerfslam.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Implicit scene representations have recently shown promising results in photo-realistic 3D reconstruction and view synthesis based on a set of calibrated views. However, their applications face several challenges, including unknown camera poses, boundary ambiguity, and observation noise. This paper proposes a novel online scene representation method that simultaneously learns to represent the target scene and estimates the camera poses from an RGB-D stream. An implicit scene representation function built with scale-encoded cascaded grids is proposed to represent scenes online from incremental observations. This implicit function is optimized in a reparameterized domain that is designed to provide defined boundaries. The cascaded grids are progressively distilled in this reparameterized domain to improve their model capacity and geometry accuracy. A radiance field deblurring module based on a physical imaging process is further proposed to restore a photo-realistic reconstruction against camera motion blur, which is the main component of the observation noise. The proposed method can produce sharp and photo-realistic representations of scenes under various shooting conditions without known camera poses. Experiments on multiple datasets demonstrate the effectiveness of the proposed method in improving view synthesis and camera tracking results for online scene representation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+        <video id="demo" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/demo_1080p.mp4"
+                    type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
